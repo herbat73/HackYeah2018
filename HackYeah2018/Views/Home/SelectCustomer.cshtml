@@ -1,0 +1,66 @@
+﻿@{
+    ViewData["Title"] = "Select customer";
+}
+
+@model SelectedCustomer
+
+<section class="mb-4">
+
+    <!--Section heading-->
+    <h2 class="h1-responsive font-weight-bold text-center my-4">Select customer</h2>
+    <!--Section description-->
+    <p class="text-center w-responsive mx-auto mb-5">
+        Fill the form by selecting bank and entering customer number to get customer data.
+    </p>
+
+    <div class="row">
+        <!--Grid column-->
+        <div class="col-md-12">
+            <form id="selectCustomer-form" name="selectCustomer-form" action="@Url.Action("CheckCustomer", "Home")" method="POST">
+
+                <!--Grid row-->
+                <div class="row">
+
+                    <!--Grid column-->
+                    <div class="col-12 text-md-center">
+                        <select id="selectBank" class="browser-default custom-select" asp-for="Bank">
+                            <option value="1" selected="@(Model.Bank==1 ? "selected" : null)">Bank 1</option>
+                            <option value="2" selected="@(Model.Bank==2 ? "selected" : null)">Bank 2</option>
+                            <option value="3" selected="@(Model.Bank==3 ? "selected" : null)">Bank 3</option>
+                            <option value="4" selected="@(Model.Bank==4 ? "selected" : null)">Bank 4</option>
+                        </select>
+                    </div>
+                    <!--Grid column-->
+
+                    <div class="md-form mt-md-3 col-4 offset-4 text-md-center">
+                        <input class="form-control" type="text" placeholder="Enter customer number" asp-for="CustomerNumber" aria-label="Search" value="@Model.CustomerNumber">
+                    </div>
+
+                </div>
+                <!--Grid row-->
+
+                <div class="text-center text-md-center">
+                    <input type="submit" value="Search" class="btn btn-primary">
+                </div>
+
+            </form>
+
+        </div>
+        <!--Grid column-->
+    </div>
+
+</section>
+
+@section scripts {
+    <environment names="Development,Staging,Production">
+    </environment>
+
+    <script>
+        $(document).ready(function () {
+            $('.mdb-select').materialSelect();
+        });
+    </script>
+
+}
+
+

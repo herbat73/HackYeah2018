@@ -1,0 +1,100 @@
+﻿@using HackYeah2018.APIHelperClass
+
+@{
+    ViewData["Title"] = "Account list";
+}
+
+@model List<Transaction>
+
+<section class="mb-4">
+
+    <!--Section heading-->
+    <h2 class="h1-responsive font-weight-bold text-center my-4">Customer transactions list</h2>
+    <!--Section description-->
+    <p class="text-center w-responsive mx-auto mb-5">
+        <table id="dtBasicExample" class="table table-striped table-bordered" cellspacing="0" width="100%">
+            <thead>
+                <tr>
+                    <th class="th-sm">
+                        Id
+                    </th>
+                    <th class="th-sm">
+                        Amount
+                    </th>
+                    <th class="th-sm">
+                        Currency
+                    </th>
+                    <th class="th-sm">
+                        Description
+                    </th>
+                    <th class="th-sm">
+                        Trade Date
+                    </th>
+                    <th class="th-sm">
+                        Category
+                    </th>
+                    <th class="th-sm">
+                        Post Transaction Balance
+                    </th>
+                    <th class="th-sm">
+                        Booking Date
+                    </th>
+                    <th class="th-sm">
+                        Sender
+                    </th>
+                    <th class="th-sm">
+                        Recipient
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                    {
+                        var senderAccountNumber = "";
+                        var recipientAccountNumber = "";
+                <tr>
+                    <td>@item.itemId</td>
+                    <td>@item.amount</td>
+                    <td>@item.currency_pair</td>
+                    <td>@item.description</td>
+                    <td>@item.tradeDate</td>
+                    <td>@item.transactionCategory</td>
+                    <td>@item.postTransactionBalance</td>
+                    <td>@item.bookingDate</td>
+                    <td>
+                        @{
+                            if (item.sender!=null) {
+                                senderAccountNumber = item.sender.accountNumber;
+                            }
+                        }
+                        @senderAccountNumber
+                    </td>
+                    <td>
+                        @{
+                            if (item.recipient!=null) {
+                                recipientAccountNumber = item.recipient.accountNumber;
+                            }
+                        }
+                        @recipientAccountNumber
+                    </td>
+                </tr>
+                    }
+
+            </tbody>
+        </table>
+    </p>
+
+</section>
+
+@section scripts {
+    <environment names="Development,Staging,Production">
+    </environment>
+
+    <script>
+        $(document).ready(function () {
+            $('#dtBasicExample').DataTable();
+            $('.dataTables_length').addClass('bs-select');
+        });
+    </script>
+
+}

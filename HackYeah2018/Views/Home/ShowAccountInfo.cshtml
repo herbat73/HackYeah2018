@@ -1,0 +1,74 @@
+﻿@using HackYeah2018.APIHelperClass
+
+@{
+    ViewData["Title"] = "Account info";
+}
+
+@model Account
+
+<section class="mb-4">
+
+    <!--Section heading-->
+    <h2 class="h1-responsive font-weight-bold text-center my-4">Account info @Model.accountNumber</h2>
+    <!--Section description-->
+    <p class="text-center w-responsive mx-auto mb-5">
+        Here is current account info.
+    </p>
+
+    <div class="row">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Info</th>
+                    <th scope="col">Data</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">1</th>
+                    <td>Type</td>
+                    <td>@Model.accountTypeName</td>
+                </tr>
+                <tr>
+                    <th scope="row">2</th>
+                    <td>Holder type</td>
+                    <td>@Model.accountHolderType</td>
+                </tr>
+                <tr>
+                    <th scope="row">3</th>
+                    <td>Client Name</td>
+                    <td>@Model.accountNameClient</td>
+                </tr>
+                <tr>
+                    <th scope="row">3</th>
+                    <td>Currency</td>
+                    <td>@Model.currency_pair</td>
+                </tr>
+                <tr>
+                    <th scope="row">4</th>
+                    <td>Booking balance</td>
+                    <td>@Model.bookingBalance</td>
+                </tr>
+                <tr>
+                    <th scope="row">5</th>
+                    <td>Available balance</td>
+                    <td>@Model.availableBalance</td>
+                </tr>
+                <tr>
+                    <th scope="row">6</th>
+                    <td>Bank</td>
+                    <td>@Model.bank.name</td>
+                </tr>
+                <tr>
+                    <th scope="row">6</th>
+                    <td>Bank</td>
+                    <td>@Model.bank.bicOrSwift</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+</section>
+
+
