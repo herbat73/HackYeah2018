@@ -16,29 +16,28 @@ This repo contains made during hackaton HackYeah 2018, Warsaw, Poland.
 
 ![Full responsive app](/start.png)
 
-* Select customer by entering customer number and select bank from the list. Please notice allowed customer and bank are in the clients.csv file for an example user paris like follows:
+* Select customer by entering customer number and select bank from the list. Please notice allowed customers and banks are in the clients.csv file for an example user paris like follows:
 - bank 1, 6667
 - bank 4, 6687
 - bank 1, 6727...
 
 ![Select customer to check](/select.png)
 
-* Role context page display
+* Page listing customer accounts in bank
 
 ![Customer accounts in selected bank list display](/customeraccounts.png)
 
-* Admin can manage users, users groups, file categories, check users activity logs
+* Transaction list for selected account
 
-![Admin can manage](/Docs/5_users_ibn_groups.png)
+![Transaction list for selected accoun](/transactions.png)
 
-* User with role 'manager' has rigth to upload files to selected group and file category or private files with drag and drop functionality
+* Monthly balance for selected account based on transaction list
 
-![Manager role](/Docs/7_manager_upload.png)
+![Manager role](/balancechart.png)
 
-* Users can download files from groups they belongs to
+* Detailed account info
 
-![Manager role](/Docs/8_user_download.png)
-
+![Detailed account info](/accountinfo.png)
 
 # TechStack
 
