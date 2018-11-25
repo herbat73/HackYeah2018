@@ -16,13 +16,16 @@ This repo contains made during hackaton HackYeah 2018, Warsaw, Poland.
 
 ![Full responsive app](/start.png)
 
-* Role level permission (admin, manager, user)
+* Select customer by entering customer number and select bank from the list. Please notice allowed customer and bank are in the clients.csv file for an example user paris like follows:
+- bank 1, 6667
+- bank 4, 6687
+- bank 1, 6727...
 
-![Role level permission](/Docs/2_login_admin.png)
+![Select customer to check](/select.png)
 
 * Role context page display
 
-![Role context page display](/Docs/3_admin_page.png)
+![Customer accounts in selected bank list display](/customeraccounts.png)
 
 * Admin can manage users, users groups, file categories, check users activity logs
 
