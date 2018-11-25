@@ -14,7 +14,7 @@ This repo contains made during hackaton HackYeah 2018, Warsaw, Poland.
 
 * Full responsive app accessed by Web or mobile
 
-![Full responsive app](/Docs/1_start.png)
+![Full responsive app](/start.png)
 
 * Role level permission (admin, manager, user)
 

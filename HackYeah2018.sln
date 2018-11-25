@@ -8,6 +8,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{E36C983A-081A-42EF-83D3-C149C256AF33}"
 	ProjectSection(SolutionItems) = preProject
 		README.md = README.md
+		start.png = start.png
 	EndProjectSection
 EndProject
 Global
